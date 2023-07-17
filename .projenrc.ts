@@ -12,6 +12,16 @@ const project = new cdktf.ConstructLibraryCdktf({
   name: '@rlmartin-projen/cdktf-construct-script-runner',
   projenrcTs: true,
   repositoryUrl: 'git@github.com:rlmartin-projen/cdktf-construct-script-runner.git',
+  gitignore: [
+    'cdktf.out'
+  ],
+  deps: [
+    '@rlmartin-projen/terraform-aws-modules-ecr@^0.0.0',
+  ],
+  peerDeps: [
+    '@rlmartin-projen/terraform-aws-modules-ecr@^0.0.0',
+    '@cdktf/provider-aws@^15.0.0',
+  ],
   releaseToNpm: true,
   npmAccess: NpmAccess.PUBLIC,
   minNodeVersion: `${nodeVersion}.0.0`,
