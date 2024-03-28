@@ -1,7 +1,7 @@
 import { cdktf } from 'projen';
 import { NpmAccess } from 'projen/lib/javascript';
 const majorVersion = 0;
-const nodeVersion = "18";
+const nodeVersion = '18';
 
 const project = new cdktf.ConstructLibraryCdktf({
   author: 'Ryan Martin',
@@ -18,11 +18,11 @@ const project = new cdktf.ConstructLibraryCdktf({
   workflowNodeVersion: nodeVersion,
   majorVersion,
   releaseBranches: {
-    dev: { prerelease: "dev", npmDistTag: "dev", majorVersion },
+    dev: { prerelease: 'dev', npmDistTag: 'dev', majorVersion },
   },
   depsUpgradeOptions: {
     workflowOptions: {
-      branches: ["main"],
+      branches: ['main'],
     },
   },
 
